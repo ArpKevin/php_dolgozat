@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myForm{
+            width: 300px;
+            margin: 0 auto;
+            background-color: grey;
+            padding: 20px;
+        }
+        .hobbies, .gender, .introduction{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <form action="submit.php" method="post" id="myForm">
+        <h1>Jelentkezési lap</h1>
+        Teljes név:<br><input type="text" placeholder="név:" name="name"><br>
+        Email:<br><input type="email" placeholder="email:" name="email"><br>
+        Jelszó:<br><input type="password" placeholder="jelszó:" name="password"><br>
+        Kor:<br><input type="number" placeholder="szám:" name="age"><br>
+        Születési dátum:<br><input type="date" placeholder="születési dátum:" name="birthdate"><br><br>
+        <label for="country">Válassz országot:</label>
+        <select name="country" id="country">
+            <option value="">válassz</option>
+            <option value="hu">Magyarország</option>
+            <option value="de">Németország</option>
+        </select>
+        <fieldset class="hobbies">
+            <legend>Hobbik:</legend>
+            <input type="checkbox" id="sport" name="sport" value="sport">
+            <label for="sport">Sport</label><br>
+            <input type="checkbox" id="reading" name="reading" value="reading">
+            <label for="reading">Olvasás</label><br>
+            <input type="checkbox" id="travel" name="travel" value="travel">
+            <label for="travel">Utazás</label><br><br>
+        </fieldset>
+
+        <fieldset class="gender">
+            <legend>Nemed:</legend>
+            <input type="checkbox" id="male" name="gender" value="gender">
+            <label for="male">Férfi</label><br>
+            <input type="checkbox" id="female" name="gender" value="gender">
+            <label for="female">Nő</label><br>
+        </fieldset>
+        <fieldset class="introduction">
+            <legend>Bemutatkozás:</legend>
+            <textarea name="introduction" id="introduction"></textarea>
+        </fieldset>
+        <input type="submit">
+    </form>
+</body>
+</html>
